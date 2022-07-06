@@ -17,7 +17,7 @@ docker-compose --version
 #zabbix install
 cd /opt/
 git clone https://github.com/zabbix/zabbix-docker
-docker-compose -f ./docker-compose_v3_alpine_mysql_latest.yaml up -d
+docker-compose -f ./zabbix-docker/docker-compose_v3_alpine_mysql_latest.yaml up -d
 docker ps -a
 #ip
 hostname -I
