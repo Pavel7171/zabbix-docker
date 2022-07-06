@@ -1,0 +1,12 @@
+#!/bin/bash
+#add_repositoty
+wget https://repo.zabbix.com/zabbix/5.5/debian/pool/main/z/zabbix-release/zabbix-release_5.5-1+debian11_all.deb
+#export PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+#install pack
+dpkg -i zabbix-release_5.5-1+debian11_all.deb
+sudo apt update
+#install agent
+sudo apt install zabbix-agent
+#open_conf
+sudo nano /etc/zabbix/zabbix_agentd.conf
