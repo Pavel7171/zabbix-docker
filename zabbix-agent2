@@ -1,0 +1,10 @@
+#!/bin/bash
+wget https://repo.zabbix.com/zabbix/5.4/debian/pool/main/z/zabbix-release/zabbix-release_5.4-1+debian10_all.deb
+dpkg -i zabbix-release_5.4-1+debian10_all.deb
+apt update
+apt install zabbix-agent2
+systemctl restart zabbix-agent2
+systemctl enable zabbix-agent2
+usermod -aG docker zabbix
+setfacl --modify user:zabbix:rw /var/run/docker.sock
+nano /etc/zabbix/zabbix_agent2.conf 
