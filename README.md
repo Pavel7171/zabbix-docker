@@ -1,5 +1,5 @@
 # zabbix-docker
-Install docker
-Get yml from zabbix-repository
-Docker-compose zabbix
-Install zabbix-agent
+1.Install docker
+2.Get yml from zabbix-repository
+3.Docker-compose zabbix
+4.Install zabbix-agent
